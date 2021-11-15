@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 18px;
+}
+
+:root {
+  --pr-Dark-cyan: hsl(185, 75%, 39%);
+  --pr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --pr-Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --nr-Dark-gray: hsl(0, 0%, 59%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: -2.5rem;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.attribution a {
+  color: rgb(0, 0, 0);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+
+  font-family: "Kumbh Sans", sans-serif;
+
+  background-color: var(--pr-Dark-cyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: calc(-90vw / 2) calc(-140vh / 2),
+    calc(100vw / 2) calc(90vh / 2);
+  background-size: 100% 100%;
+}
+
+main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  min-width: 18.75em;
+
+  background-color: #fff;
+
+  border-radius: 1.5em;
+
+  box-shadow: 0 6px 30px 6px rgba(0, 0, 0, 0.2);
+}
+
+.heading-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.para-text {
+  color: var(--nr-Dark-gray);
+  font-weight: 400;
+  margin-top: 0.4rem;
+  letter-spacing: 1.2px;
+}
+
+footer p:nth-of-type(even) {
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+img {
+  display: block;
+}
+header {
+  position: relative;
+
+  height: 8.75em;
+  width: 100%;
+  background: url(images/bg-pattern-card.svg);
+  border-radius: 1.5em 1.5em 0 0;
+}
+.heading-text span {
+  font-size: 1rem;
+  margin-left: 0.25rem;
+}
+header img {
+  position: absolute;
+  border-radius: 50%;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* align-self: center; */
+
+  outline: 7.5px solid #fff;
+  outline-offset: -1px;
+}
+
+.card__body,
+footer {
+  padding: 1rem;
+}
+
+.card__body {
+  margin: 3.25em 0 1em 0;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  text-align: center;
+
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1025px) {
+  body {
+    background-position: calc(-40vw / 2) calc(-120vh / 2),
+      calc(95vw / 2) calc(110vh / 2);
+    background-size: auto;
+  }
+  main {
+    min-width: 21.875em;
+  }
+  .card__body,
+  footer {
+    padding: 1rem;
+  }
+  .para-text {
+    margin-top: 0.8rem;
+    letter-spacing: 1.2px;
+  }
+}
